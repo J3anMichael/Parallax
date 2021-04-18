@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="css/img/logo.jpg" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section> 
+        <img src="css/img/stars.png" id="stars">
+        <img src="css/img/moon.png" id="moon">
+        <img src="css/img/mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Hello World!</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="css/img/mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Caraio</h2>
+        <p>Lorem ipsum dolor sit amet, et movet suscipiantur mei. Eu nam munere eleifend accusamus, te fabulas officiis consectetuer vis. Est ea persius quaeque. Ei mei postea offendit.
+
+            Ei partem eirmod fastidii mei. Utamur singulis electram eum in, in iusto scripta vel, usu in homero reprehendunt. Facete placerat interesset at cum. Usu ex mandamus postulant, iisque molestie eu sit. Modo impedit at sea, ex vix urbanitas reprehendunt.
+            
+            Mutat admodum delectus an vim, mea ex impetus mentitum noluisse. Eam et mandamus forensibus adipiscing, has ut simul suavitate corrumpit. Mei decore dictas ne. Eu sea aliquid complectitur. Eos falli prompta ea. Nam te fierent dolores indoctum, ut vis quot eligendi salutandi, qui illum officiis eleifend et. Sanctus commune adolescens id sit, cu ullum civibus iudicabit cum.
+            
+            Alia aperiam scriptorem sea at, case consul ubique ius te. Lorem voluptaria pri id. Reque zril ridens te nam, at vis mutat lorem labores, eligendi periculis urbanitas ne ius. Et utamur blandit inimicus vis, no sed evertitur prodesset. Sea zril causae praesent an, nobis feugiat eam ad.
+            
+            Cu nisl omnis iusto has, sed ei agam aliquam, vel te tollit vulputate intellegam. Eum ad dicunt ancillae. Ei pro feugait patrioque, aeque graeco tibique has ne, mei no eruditi fabellas. Oblique antiopam adolescens an pro, nec alia vocent iracundia in. Salutandi tincidunt te pri, ea vis dicit sensibus persequeris.<br><br><br>Lorem ipsum dolor sit amet, et movet suscipiantur mei. Eu nam munere eleifend accusamus, te fabulas officiis consectetuer vis. Est ea persius quaeque. Ei mei postea offendit.
+
+            Ei partem eirmod fastidii mei. Utamur singulis electram eum in, in iusto scripta vel, usu in homero reprehendunt. Facete placerat interesset at cum. Usu ex mandamus postulant, iisque molestie eu sit. Modo impedit at sea, ex vix urbanitas reprehendunt.
+            
+            Mutat admodum delectus an vim, mea ex impetus mentitum noluisse. Eam et mandamus forensibus adipiscing, has ut simul suavitate corrumpit. Mei decore dictas ne. Eu sea aliquid complectitur. Eos falli prompta ea. Nam te fierent dolores indoctum, ut vis quot eligendi salutandi, qui illum officiis eleifend et. Sanctus commune adolescens id sit, cu ullum civibus iudicabit cum.
+            
+            Alia aperiam scriptorem sea at, case consul ubique ius te. Lorem voluptaria pri id. Reque zril ridens te nam, at vis mutat lorem labores, eligendi periculis urbanitas ne ius. Et utamur blandit inimicus vis, no sed evertitur prodesset. Sea zril causae praesent an, nobis feugiat eam ad.
+            
+            Cu nisl omnis iusto has, sed ei agam aliquam, vel te tollit vulputate intellegam. Eum ad dicunt ancillae. Ei pro feugait patrioque, aeque graeco tibique has ne, mei no eruditi fabellas. Oblique antiopam adolescens an pro, nec alia vocent iracundia in. Salutandi tincidunt te pri, ea vis dicit sensibus persequeris.</a>
+    </div>
+
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05  + 'px';
+            mountains_behind.style.top = value * 0.05  + 'px';
+            mountains_front.style.top = value * 0  + 'px';
+            text.style.margingRight = value * 4  + 'px';
+            text.style.margingTop = value * 1.5  + 'px';
+            btn.style.margingRight = value * 4  + 'px';
+            header.style.top = value * 0.5 + 'px';
+        });
+    </script>
+</body>
+</html>
